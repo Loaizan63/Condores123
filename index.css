@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #ffffff; /* Amarillo */
+    background-color: #f4f4f4; /* Fondo gris muy claro */
     color: #000000; /* Negro */
     padding: 20px;
     display: flex;
@@ -88,9 +88,10 @@ nav ul li a:hover {
 }
 
 .carousel-item img {
-    width: 300px;
+    width: 100%;
+    max-width: 300px; /* Limita el tamaño máximo de las imágenes */
     border-radius: 10px;
-    border: 5px solid #D32F2F; /* Borde rojo en las imágenes */
+    border: 3px solid #D32F2F; /* Borde más sutil */
 }
 
 /* Sección Nuestras Secciones */
@@ -109,32 +110,93 @@ nav ul li a:hover {
     text-align: center;
     border: 2px solid #000; /* Borde negro */
 }
-.Manada{
-background-color: #FFCC00; /* Amarillo */
+
+.Manada {
+    background-color: #FFCC00; /* Amarillo */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     border: 2px solid #000; /* Borde negro */
 }
-.Tropa{
-    background-color: #03961c; /* Amarillo */
+
+.Manada a {
+    text-decoration: none; /* Eliminar el subrayado por defecto */
+    color: #000; /* Texto negro */
+    display: block; /* Asegura que el área del enlace sea toda la caja */
+}
+
+.Manada h3 {
+    color: #333; /* Rojo */
+    margin-bottom: 10px;
+}
+
+.Manada p {
+    color: #000; /* Texto negro */
+}
+
+.Manada:hover {
+    transform: translateY(-5px); /* Movimiento hacia arriba */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.Manada:hover h3 {
+    color: #ffffff; /* Blanco en el título cuando pasa el mouse */
+}
+
+.Manada a:hover p {
+    color: #D32F2F; /* Rojo en el párrafo cuando pasa el mouse */
+}
+
+.Tropa {
+    background-color: #03961c; /* Verde */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     border: 2px solid #000; /* Borde negro */
 }
-.Comunidad{
-    background-color: #0049d1; /* Amarillo */
+
+.Logo-Manada, .Logo-tropa, .Logo-comunidad, .Logo-clan {
+    width: 80px; /* Aumenta el tamaño de los logos */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.Tropa a {
+    text-decoration: none; /* Eliminar el subrayado por defecto */
+    color: #000; /* Texto negro */
+    display: block; /* Asegura que el área del enlace sea toda la caja */
+}
+
+.Tropa h3 {
+    color: #333; /* Rojo */
+    margin-bottom: 10px;
+}
+
+.Tropa p {
+    color: #000; /* Texto negro */
+}
+
+.Tropa:hover {
+    transform: translateY(-5px); /* Movimiento hacia arriba */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.Tropa:hover h3 {
+    color: #ffffff; /* Blanco en el título cuando pasa el mouse */
+}
+
+.Tropa a:hover p {
+    color: #D32F2F; /* Rojo en el párrafo cuando pasa el mouse */
+}
+
+.Comunidad {
+    background-color: #0049d1; /* Azul */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     border: 2px solid #000; /* Borde negro */
-    
 }
-/* Estilos de la Comunidad */
-.logo-comunidad {
-    width: 100px;
-}
+
 .Comunidad a {
     text-decoration: none; /* Eliminar el subrayado por defecto */
     color: #000; /* Texto negro */
@@ -156,27 +218,57 @@ background-color: #FFCC00; /* Amarillo */
 }
 
 .Comunidad a:hover h3 {
-    color: #ffffff; /* Rojo más oscuro en el título cuando se pasa el mouse */
+    color: #ffffff; /* Blanco en el título cuando pasa el mouse */
 }
 
 .Comunidad a:hover p {
-    color: #000000; /* Rojo en el párrafo cuando se pasa el mouse */
+    color: #D32F2F; /* Rojo en el párrafo cuando pasa el mouse */
 }
 
-.Clan{
-    background-color: #ff0000; /* Amarillo */
+.Clan {
+    background-color: #ff0000; /* Rojo */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     border: 2px solid #000; /* Borde negro */
 }
-.Jefatura{
-    background-color: #545454; /* Amarillo */
+
+.Clan a {
+    text-decoration: none; /* Eliminar el subrayado por defecto */
+    color: #000; /* Texto negro */
+    display: block; /* Asegura que el área del enlace sea toda la caja */
+}
+
+.Clan h3 {
+    color: #333; /* Rojo */
+    margin-bottom: 10px;
+}
+
+.Clan p {
+    color: #000; /* Texto negro */
+}
+
+.Clan:hover {
+    transform: translateY(-5px); /* Movimiento hacia arriba */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.Clan:hover h3 {
+    color: #ffffff; /* Blanco en el título cuando pasa el mouse */
+}
+
+.Clan a:hover p {
+    color: #D32F2F; /* Rojo en el párrafo cuando pasa el mouse */
+}
+
+.Jefatura {
+    background-color: #545454; /* Gris oscuro */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     border: 2px solid #000; /* Borde negro */
 }
+
 .seccion h3 {
     color: #D32F2F; /* Rojo */
     margin-bottom: 10px;
@@ -186,21 +278,56 @@ background-color: #FFCC00; /* Amarillo */
     color: #000; /* Negro */
 }
 
-/* Footer */
+/* Estilos para el Footer */
 .footer {
-    background-color: #000; /* Negro */
-    color: #fff; /* Blanco */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column 2x3; /* Alinea los elementos en columna */
+    justify-content: center;
+    align-items: center; /* Centra los elementos dentro del footer */
+    gap: 20px; /* Añade un espacio entre los elementos */
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los logos */
+}
+
+.footer-logo {
+    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
+    height: auto;
+}
+
+.footer .social-links {
+    display: flex; /* Los iconos estarán en una fila */
+    justify-content: lef;
+    gap: 20px; /* Espacio entre los iconos */
 }
 
 .footer .social-links a {
-    color: #FFCC00; /* Amarillo */
+    color: #FFCC00; /* Amarillo para los iconos */
     text-decoration: none;
-    margin: 0 10px;
 }
 
 .footer .social-links a:hover {
     color: #D32F2F; /* Rojo al hacer hover */
 }
 
+.footer .social-links a img {
+    width: 40px; /* Ajusta el tamaño de los iconos */
+    height: auto;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #ffffff; /* Asegura que los enlaces sean blancos */
+    text-decoration: none;
+}
