@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página no encontrada</title>
+    <link rel="icon" href="Logo.png" type="image/png">
+    <style>
+        /* Estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff;
+            color: #333;
+        }
+
+        header {
+            background-color: #FFCC00; /* Amarillo */
+            color: #000000; /* Negro */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            width: 120px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #D32F2F; /* Rojo oscuro al hacer hover */
+        }
+
+        .error-section {
+            padding: 40px;
+            text-align: center;
+            background-color: #FFCC00; /* Amarillo */
+            color: #000; /* Negro */
+        }
+
+        .error-section h1 {
+            font-size: 100px;
+            color: #D32F2F; /* Rojo */
+        }
+
+        .error-section h2 {
+            font-size: 2rem;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .error-section p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .error-section a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #D32F2F; /* Rojo */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .error-section a:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer .social-links a {
+            color: #FFCC00; /* Amarillo */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer .social-links a:hover {
+            color: #D32F2F; /* Rojo al hacer hover */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Logo.png" alt="Logo del grupo" width="120px">
+        </div>
+    </header>
+
+    <section class="error-section">
+        <h1>404</h1>
+        <h2>¡Ups! Página no encontrada</h2>
+        <p>Scout perdiste tu camino, no pudimos encontrar la página que buscabas. Puede que se haya movido o que no esté disponible.</p>
+        <a href="index.html">Regresar al inicio</a>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
