@@ -1,0 +1,189 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fff; /* Fondo blanco para dar contraste */
+    color: #333;
+}
+
+header {
+    background-color: #f4f4f4; /* Fondo gris muy claro */
+    color: #000000; /* Negro */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #000000; /* Negro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #D32F2F; /* Rojo oscuro al hacer hover */
+}
+.info-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #FFCC00; /* Amarillo */
+    color: #000; /* Negro */
+}
+
+.info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de los planes */
+.plans-container {
+    display: flex;
+    justify-content: center; /* Centra los cards */
+    gap: 20px; /* Espacio entre los cards */
+    padding: 40px;
+    background-color: #ffffff; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    flex-wrap: wrap; /* Permite que los cards se ajusten a múltiples líneas en pantallas pequeñas */
+}
+
+.plan-card {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    width: 250px; /* Ancho fijo para cada card */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #fff; /* Borde blanco */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.plan-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff; /* Blanco */
+}
+
+.plan-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ccc; /* Gris claro */
+}
+
+input[type="checkbox"] {
+    display: none; /* Ocultar el checkbox */
+}
+
+/* Estilo del botón */
+.menu-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #D32F2F;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.menu-button:hover {
+    background-color: #FF5722;
+}
+
+/* Ocultar el contenido por defecto */
+.hidden-menu {
+    display: none;
+    padding: 20px;
+    background-color: #333; /* Fondo gris oscuro */
+    border-radius: 5px;
+    border: 1px solid #666; /* Borde gris */
+    color: #fff;
+}
+
+/* Mostrar el contenido cuando el checkbox es marcado */
+input[type="checkbox"]:checked + .menu-button + .hidden-menu {
+    display: block;
+}
+
+footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para el Footer */
+.footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column 2x3; /* Alinea los elementos en columna */
+    justify-content: center;
+    align-items: center; /* Centra los elementos dentro del footer */
+    gap: 20px; /* Añade un espacio entre los elementos */
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los logos */
+}
+
+.footer-logo {
+    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
+    height: auto;
+}
+
+.footer .social-links {
+    display: flex; /* Los iconos estarán en una fila */
+    justify-content: lef;
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+.footer .social-links a {
+    color: #FFCC00; /* Amarillo para los iconos */
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    color: #D32F2F; /* Rojo al hacer hover */
+}
+
+.footer .social-links a img {
+    width: 40px; /* Ajusta el tamaño de los iconos */
+    height: auto;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #ffffff; /* Asegura que los enlaces sean blancos */
+    text-decoration: none;
+}
+
