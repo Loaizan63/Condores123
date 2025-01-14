@@ -61,6 +61,7 @@ nav ul li a:hover {
     margin-left: 40px; /* Centra el contenedor */
     margin-right: 40px; /* Centra el contenedor */
 }
+
 /* Contenedor principal de las tarjetas */
 .plans-container {
     display: grid;
@@ -95,7 +96,7 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columnas */
     gap: 10px; /* Espacio entre las imágenes */
-    margin-top: 20px; /* Espacio por encima de las imágenes */
+    margin-top: 10px; /* Espacio por encima de las imágenes */
 }
 
 /* Estilo para cada imagen */
@@ -105,11 +106,12 @@ nav ul li a:hover {
     border-radius: 5px; /* Bordes redondeados */
 }
 
-
 h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    text-align: center;
 }
+
 .carousel {
     background-color: #fff; /* Fondo blanco */
     padding: 40px 0;
@@ -140,25 +142,60 @@ h2 {
     border: 5px solid #000000; /* Borde rojo en las imágenes */
 }
 
-
 .info-section p, .oracion-section p, .promesa-section p {
     font-size: 1.2rem;
     line-height: 1.6;
 }
 
-footer {
-    background-color: #003366; /* Azul oscuro */
-    color: #fff;
+.footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column 2x3; /* Alinea los elementos en columna */
+    justify-content: center;
+    align-items: center; /* Centra los elementos dentro del footer */
+    gap: 20px; /* Añade un espacio entre los elementos */
 }
 
-footer .social-links a {
-    color: #fff; /* Blanco */
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los logos */
+}
+
+.footer-logo {
+    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
+    height: auto;
+}
+
+.footer .social-links {
+    display: flex; /* Los iconos estarán en una fila */
+    justify-content: lef;
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+.footer .social-links a {
+    color: #FFCC00; /* Amarillo para los iconos */
     text-decoration: none;
-    margin: 0 10px;
 }
 
-footer .social-links a:hover {
-    color: #FFCC00; /* Amarillo al hacer hover */
+.footer .social-links a:hover {
+    color: #D32F2F; /* Rojo al hacer hover */
+}
+
+.footer .social-links a img {
+    width: 40px; /* Ajusta el tamaño de los iconos */
+    height: auto;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #ffffff; /* Asegura que los enlaces sean blancos */
+    text-decoration: none;
 }
