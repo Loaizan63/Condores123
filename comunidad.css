@@ -115,6 +115,14 @@ h2 {
     text-align: center;
     justify-self: center;
 }
+h4{
+    font-family: 'Impact', sans-serif;
+            font-size: 3rem; /* Título grande para impacto */
+            color: #ffffff; /* Rojo fuerte */
+            text-transform: uppercase; /* Mayúsculas para resaltar */
+            letter-spacing: 5px; /* Espaciado amplio entre letras */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
+}
 
 .carousel {
     background-color: #fff; /* Fondo blanco */
