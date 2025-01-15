@@ -50,6 +50,12 @@ nav ul li a:hover {
     background-color: #FFCC00; /* Amarillo */
     color: #000; /* Negro */
 }
+.info-section1 {
+    padding: 40px;
+    text-align: center;
+    background-color: #F5F5F5; /*  */
+    color: #000; /* Negro */
+}
 
 .info-section h2 {
     font-size: 2rem;
@@ -60,6 +66,7 @@ nav ul li a:hover {
     max-width: 100%;
     border-radius: 10px;
     margin-top: 20px;
+    border: #000;
 }
 
 /* Carrusel */
@@ -110,6 +117,29 @@ nav ul li a:hover {
     text-align: center;
     border: 2px solid #000; /* Borde negro */
 }
+.Manada, .Tropa, .Comunidad, .Clan {
+    max-width: 300px; /* Limita el tamaño de las cards */
+    height: auto; /* Mantiene la proporción del contenido */
+    margin: 0 auto; /* Centra las cards */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #000; /* Borde negro */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Manada img, .Tropa img, .Comunidad img, .Clan img {
+    width: 100%; /* Ajusta la imagen a la medida de la card */
+    height: 150px; /* Establece una altura fija para las imágenes */
+    object-fit: cover; /* La imagen se ajustará a la card sin perder la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espaciado entre la imagen y el texto */
+}
+
+.Manada:hover, .Tropa:hover, .Comunidad:hover, .Clan:hover {
+    transform: translateY(-5px); /* Movimiento hacia arriba */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
 
 .Manada {
     background-color: #FFCC00; /* Amarillo */
@@ -126,7 +156,7 @@ nav ul li a:hover {
 }
 
 .Manada h3 {
-    color: #333; /* Rojo */
+    color: #000000; /* Rojo */
     margin-bottom: 10px;
 }
 
@@ -144,7 +174,7 @@ nav ul li a:hover {
 }
 
 .Manada a:hover p {
-    color: #D32F2F; /* Rojo en el párrafo cuando pasa el mouse */
+    color: #000000; /* Rojo en el párrafo cuando pasa el mouse */
 }
 
 .Tropa {
@@ -155,11 +185,7 @@ nav ul li a:hover {
     border: 2px solid #000; /* Borde negro */
 }
 
-.Logo-Manada, .Logo-tropa, .Logo-comunidad, .Logo-clan {
-    width: 80px; /* Aumenta el tamaño de los logos */
-    height: auto;
-    margin-bottom: 15px;
-}
+
 
 .Tropa a {
     text-decoration: none; /* Eliminar el subrayado por defecto */
@@ -168,7 +194,7 @@ nav ul li a:hover {
 }
 
 .Tropa h3 {
-    color: #333; /* Rojo */
+    color: #000000; /* Rojo */
     margin-bottom: 10px;
 }
 
@@ -186,7 +212,7 @@ nav ul li a:hover {
 }
 
 .Tropa a:hover p {
-    color: #D32F2F; /* Rojo en el párrafo cuando pasa el mouse */
+    color: #000000; /* Rojo en el párrafo cuando pasa el mouse */
 }
 
 .Comunidad {
@@ -204,12 +230,12 @@ nav ul li a:hover {
 }
 
 .Comunidad h3 {
-    color: #333; /* Rojo */
+    color: #000000; /* Rojo */
     margin-bottom: 10px;
 }
 
 .Comunidad p {
-    color: #000; /* Texto negro */
+    color: #000000; /* Texto negro */
 }
 
 .Comunidad:hover {
@@ -222,7 +248,7 @@ nav ul li a:hover {
 }
 
 .Comunidad a:hover p {
-    color: #D32F2F; /* Rojo en el párrafo cuando pasa el mouse */
+    color: #000000; /* Rojo en el párrafo cuando pasa el mouse */
 }
 
 .Clan {
@@ -240,7 +266,7 @@ nav ul li a:hover {
 }
 
 .Clan h3 {
-    color: #333; /* Rojo */
+    color: #000000; /* Rojo */
     margin-bottom: 10px;
 }
 
@@ -258,16 +284,9 @@ nav ul li a:hover {
 }
 
 .Clan a:hover p {
-    color: #D32F2F; /* Rojo en el párrafo cuando pasa el mouse */
+    color: #000000; /* Rojo en el párrafo cuando pasa el mouse */
 }
 
-.Jefatura {
-    background-color: #545454; /* Gris oscuro */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid #000; /* Borde negro */
-}
 
 .seccion h3 {
     color: #D32F2F; /* Rojo */
@@ -331,3 +350,5 @@ nav ul li a:hover {
     color: #ffffff; /* Asegura que los enlaces sean blancos */
     text-decoration: none;
 }
+
+
