@@ -65,18 +65,96 @@ nav ul li a:hover {
     color: #fff; /* Texto blanco */
     flex-wrap: wrap; /* Permite que los cards se ajusten a múltiples líneas en pantallas pequeñas */
 }
-
 .plan-card {
+    background-color: #000000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    width: 250px; /* Ancho fijo para cada card */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #f2ff00; /* Borde blanco */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+.plan-cardV {
     background-color: #000; /* Fondo negro */
     color: #fff; /* Texto blanco */
     width: 250px; /* Ancho fijo para cada card */
     padding: 20px;
     border-radius: 10px;
-    border: 2px solid #fff; /* Borde blanco */
+    border: 2px solid #03961c; /* Borde blanco */
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
-
+.plan-cardS {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    width: 250px; /* Ancho fijo para cada card */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #f12525; /* Borde blanco */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+.plan-cardG {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    width: 250px; /* Ancho fijo para cada card */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #f2ff00; /* Borde blanco */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+.plan-cardM {
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    width: 500px; /* Ancho fijo para cada card */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(207, 0, 0, 0.3); /* Sombra suave */
+}
+.plan-card1 {
+    background-color: #000; /* Fondo negro */
+    color: #FFCC00;
+    width: 250px; /* Ancho fijo para cada card */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #FFCC00; /* Borde blanco */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    
+}
+.plan-card2 {
+    background-color: #000; /* Fondo negro */
+    color: #03961c;
+    width: 250px; /* Ancho fijo para cada card */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #03961c; /* Borde blanco */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+.plan-card3 {
+    background-color: #000; /* Fondo negro */
+    color: #0049d1;
+    width: 250px; /* Ancho fijo para cada card */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #0049d1; /* Borde blanco */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+.plan-card4 {
+    background-color: #000; /* Fondo negro */
+    color: #D32F2F;
+    width: 250px; /* Ancho fijo para cada card */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #D32F2F; /* Borde blanco */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
 .plan-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
@@ -92,12 +170,11 @@ nav ul li a:hover {
 input[type="checkbox"] {
     display: none; /* Ocultar el checkbox */
 }
-
 /* Estilo del botón */
 .menu-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #D32F2F;
+    background-color: #ff0000;
     color: #fff;
     font-weight: bold;
     text-align: center;
@@ -108,7 +185,9 @@ input[type="checkbox"] {
 }
 
 .menu-button:hover {
-    background-color: #FF5722;
+    background-color: #000000;
+   border: 22px #ffffff;
+    border-radius: 5px;
 }
 
 /* Ocultar el contenido por defecto */
