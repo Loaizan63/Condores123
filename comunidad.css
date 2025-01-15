@@ -56,8 +56,8 @@ nav ul li a:hover {
 .info-section {
     padding: 40px;
     text-align: center;
-    background-color: #ffffff; /* Azul oscuro */
-    color: #000000;
+    background-color: #003366; /* Azul oscuro */
+    color: #fff; /* Blanco */
     margin-left: 40px; /* Centra el contenedor */
     margin-right: 40px; /* Centra el contenedor */
     justify-content: center;
@@ -89,9 +89,9 @@ nav ul li a:hover {
     width: 100%; /* Las tarjetas ocupan el 100% de su celda */
     height: auto; /* Altura automática para ajustarse al contenido */
     display: flex;
-    border:2px solid#003366;
     flex-direction: column; /* Organiza el contenido verticalmente */
     justify-content: center; /* Centra el contenido verticalmente */
+    border: 2px solid #003366; /* Borde azul */
 }
 
 /* Contenedor de imágenes dentro de cada tarjeta */
@@ -115,13 +115,14 @@ h2 {
     text-align: center;
     justify-self: center;
 }
-h4{
+
+h4 {
     font-family: 'Impact', sans-serif;
-            font-size: 3rem; /* Título grande para impacto */
-            color: #ffffff; /* Rojo fuerte */
-            text-transform: uppercase; /* Mayúsculas para resaltar */
-            letter-spacing: 5px; /* Espaciado amplio entre letras */
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
+    font-size: 3rem; /* Título grande para impacto */
+    color: #ffffff; /* Blanco */
+    text-transform: uppercase; /* Mayúsculas para resaltar */
+    letter-spacing: 5px; /* Espaciado amplio entre letras */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
 }
 
 .carousel {
@@ -133,7 +134,7 @@ h4{
 .carousel h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #480095; /* Rojo */
+    color: #480095; /* Morado oscuro */
 }
 
 .carousel-container {
@@ -151,21 +152,23 @@ h4{
 .carousel-item img {
     width: 300px;
     border-radius: 10px;
-    border: 5px solid #000000; /* Borde rojo en las imágenes */
+    border: 5px solid #000000; /* Borde en las imágenes */
 }
 
+/* Estilos de párrafos */
 .info-section p, .oracion-section p, .promesa-section p {
     font-size: 1.2rem;
     line-height: 1.6;
 }
 
+/* Estilos para el footer */
 .footer {
     background-color: #000; /* Fondo negro */
     color: #fff; /* Texto blanco */
     text-align: center;
     padding: 20px;
     display: flex;
-    flex-direction: column 2x3; /* Alinea los elementos en columna */
+    flex-direction: column; /* Alinea los elementos en columna */
     justify-content: center;
     align-items: center; /* Centra los elementos dentro del footer */
     gap: 20px; /* Añade un espacio entre los elementos */
@@ -179,13 +182,13 @@ h4{
 }
 
 .footer-logo {
-    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
+    width: 100px; /* Ajusta el tamaño de los logos */
     height: auto;
 }
 
 .footer .social-links {
     display: flex; /* Los iconos estarán en una fila */
-    justify-content: lef;
+    justify-content: center; /* Centra los iconos */
     gap: 20px; /* Espacio entre los iconos */
 }
 
@@ -211,6 +214,7 @@ h4{
     color: #ffffff; /* Asegura que los enlaces sean blancos */
     text-decoration: none;
 }
+
 /* Media Queries para Responsive */
 
 /* Móviles */
@@ -246,7 +250,7 @@ h4{
 /* Tabletas */
 @media screen and (max-width: 1024px) {
     .secciones {
-        grid-template-columns: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
     }
 
     .carousel-container {
