@@ -47,7 +47,7 @@ nav ul li a:hover {
     padding: 40px;
     text-align: center;
     background-color: #FFCC00; /* Amarillo */
-    color: #000; /* Negro */
+    color: #000000; /* Negro */
 }
 
 .info-section h2 {
@@ -75,11 +75,12 @@ nav ul li a:hover {
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
+/*#03961c*/
 .plan-cardV {
-    background-color: #000; /* Fondo negro */
+    background-color: #000000; /* Fondo negro */
     color: #fff; /* Texto blanco */
     width: 250px; /* Ancho fijo para cada card */
-    padding: 20px;
+    padding: 23px;
     border-radius: 10px;
     border: 2px solid #03961c; /* Borde blanco */
     text-align: center;
@@ -110,6 +111,7 @@ nav ul li a:hover {
     color: #ffffff; /* Texto blanco */
     width: 500px; /* Ancho fijo para cada card */
     padding: 20px;
+    border:2px solid #572364;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(207, 0, 0, 0.3); /* Sombra suave */
@@ -160,7 +162,21 @@ nav ul li a:hover {
     margin-bottom: 15px;
     color: #fff; /* Blanco */
 }
-
+.plan-cardV h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff; /* Blanco */
+}
+.plan-cardG h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff; /* Blanco */
+}
+.plan-cardS h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff; /* Blanco */
+}
 .plan-card p {
     font-size: 1rem;
     margin-bottom: 20px;
@@ -183,7 +199,11 @@ input[type="checkbox"] {
     border-radius: 5px;
     margin-top: 10px;
 }
-
+.plan-cardM h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff; /* Blanco */
+}
 .menu-button:hover {
     background-color: #000000;
    border: 22px #ffffff;
