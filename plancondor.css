@@ -43,6 +43,7 @@ nav ul li a {
 nav ul li a:hover {
     color: #D32F2F; /* Rojo oscuro al hacer hover */
 }
+
 .info-section {
     padding: 40px;
     text-align: center;
@@ -54,137 +55,101 @@ nav ul li a:hover {
     font-size: 2rem;
     margin-bottom: 20px;
 }
-h4{
+
+h4 {
     font-family: 'Impact', sans-serif;
-            font-size: 3rem; /* Título grande para impacto */
-            color: #D32F2F; /* Rojo fuerte */
-            text-transform: uppercase; /* Mayúsculas para resaltar */
-            letter-spacing: 5px; /* Espaciado amplio entre letras */
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
+    font-size: 3rem; /* Título grande para impacto */
+    color: #D32F2F; /* Rojo fuerte */
+    text-transform: uppercase; /* Mayúsculas para resaltar */
+    letter-spacing: 5px; /* Espaciado amplio entre letras */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
 }
+
 /* Estilos para el contenedor de los planes */
 .plans-container {
     display: flex;
     justify-content: center; /* Centra los cards */
     gap: 20px; /* Espacio entre los cards */
     padding: 40px;
-    background-color: #ffffff; /* Fondo negro */
+    background-color: #ffffff; /* Fondo blanco */
     color: #fff; /* Texto blanco */
     flex-wrap: wrap; /* Permite que los cards se ajusten a múltiples líneas en pantallas pequeñas */
 }
+
+/* Estilos de las cards */
+.plan-card, .plan-cardV, .plan-cardS, .plan-cardG, .plan-cardM, .plan-card1, .plan-card2, .plan-card3, .plan-card4 {
+    width: 250px; /* Ancho fijo para cada card */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
 .plan-card {
     background-color: #000000; /* Fondo negro */
     color: #fff; /* Texto blanco */
-    width: 250px; /* Ancho fijo para cada card */
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #f2ff00; /* Borde blanco */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    border: 2px solid #f2ff00; /* Borde amarillo */
 }
-/*#03961c*/
+
 .plan-cardV {
     background-color: #000000; /* Fondo negro */
     color: #fff; /* Texto blanco */
-    width: 250px; /* Ancho fijo para cada card */
-    padding: 23px;
-    border-radius: 10px;
-    border: 2px solid #03961c; /* Borde blanco */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    border: 2px solid #03961c; /* Borde verde */
 }
+
 .plan-cardS {
     background-color: #000; /* Fondo negro */
     color: #fff; /* Texto blanco */
-    width: 250px; /* Ancho fijo para cada card */
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #f12525; /* Borde blanco */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    border: 2px solid #f12525; /* Borde rojo */
 }
+
 .plan-cardG {
     background-color: #000; /* Fondo negro */
     color: #fff; /* Texto blanco */
-    width: 250px; /* Ancho fijo para cada card */
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #f2ff00; /* Borde blanco */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    border: 2px solid #f2ff00; /* Borde amarillo */
 }
+
 .plan-cardM {
     background-color: #000000; /* Fondo negro */
     color: #ffffff; /* Texto blanco */
-    width: 500px; /* Ancho fijo para cada card */
-    padding: 20px;
-    border:2px solid #572364;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(207, 0, 0, 0.3); /* Sombra suave */
+    width: 500px; /* Card más grande */
+    border: 2px solid #572364;
+    box-shadow: 0 4px 10px rgba(207, 0, 0, 0.3); /* Sombra roja */
 }
+
 .plan-card1 {
     background-color: #000; /* Fondo negro */
     color: #FFCC00;
-    width: 250px; /* Ancho fijo para cada card */
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #FFCC00; /* Borde blanco */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
-    
+    border: 2px solid #FFCC00; /* Borde amarillo */
 }
+
 .plan-card2 {
     background-color: #000; /* Fondo negro */
     color: #03961c;
-    width: 250px; /* Ancho fijo para cada card */
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #03961c; /* Borde blanco */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    border: 2px solid #03961c; /* Borde verde */
 }
+
 .plan-card3 {
     background-color: #000; /* Fondo negro */
     color: #0049d1;
-    width: 250px; /* Ancho fijo para cada card */
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #0049d1; /* Borde blanco */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    border: 2px solid #0049d1; /* Borde azul */
 }
+
 .plan-card4 {
     background-color: #000; /* Fondo negro */
     color: #D32F2F;
-    width: 250px; /* Ancho fijo para cada card */
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #D32F2F; /* Borde blanco */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    border: 2px solid #D32F2F; /* Borde rojo */
 }
-.plan-card h3 {
+
+/* Estilo para los títulos dentro de las cards */
+.plan-card h3, .plan-cardV h3, .plan-cardS h3, .plan-cardG h3, .plan-cardM h3, .plan-card1 h3, .plan-card2 h3, .plan-card3 h3, .plan-card4 h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: #fff; /* Blanco */
 }
-.plan-cardV h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #fff; /* Blanco */
-}
-.plan-cardG h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #fff; /* Blanco */
-}
-.plan-cardS h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #fff; /* Blanco */
-}
-.plan-card p {
+
+/* Estilo para los textos dentro de las cards */
+.plan-card p, .plan-cardV p, .plan-cardS p, .plan-cardG p, .plan-cardM p, .plan-card1 p, .plan-card2 p, .plan-card3 p, .plan-card4 p {
     font-size: 1rem;
     margin-bottom: 20px;
     color: #ccc; /* Gris claro */
@@ -193,6 +158,7 @@ h4{
 input[type="checkbox"] {
     display: none; /* Ocultar el checkbox */
 }
+
 /* Estilo del botón */
 .menu-button {
     display: inline-block;
@@ -206,14 +172,10 @@ input[type="checkbox"] {
     border-radius: 5px;
     margin-top: 10px;
 }
-.plan-cardM h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #fff; /* Blanco */
-}
+
 .menu-button:hover {
     background-color: #000000;
-   border: 22px #ffffff;
+    border: 2px solid #ffffff;
     border-radius: 5px;
 }
 
@@ -232,24 +194,17 @@ input[type="checkbox"]:checked + .menu-button + .hidden-menu {
     display: block;
 }
 
-footer {
-    background-color: #000; /* Fondo negro */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
 /* Estilos para el Footer */
 .footer {
     background-color: #000; /* Fondo negro */
     color: #fff; /* Texto blanco */
-    text-align: center;
     padding: 20px;
+    text-align: center;
     display: flex;
-    flex-direction: column 2x3; /* Alinea los elementos en columna */
+    flex-direction: column;
     justify-content: center;
-    align-items: center; /* Centra los elementos dentro del footer */
-    gap: 20px; /* Añade un espacio entre los elementos */
+    align-items: center;
+    gap: 20px; /* Espacio entre los elementos */
 }
 
 .footer-left, .footer-right {
@@ -260,13 +215,13 @@ footer {
 }
 
 .footer-logo {
-    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
+    width: 100px; /* Ajusta el tamaño de los logos */
     height: auto;
 }
 
 .footer .social-links {
     display: flex; /* Los iconos estarán en una fila */
-    justify-content: lef;
+    justify-content: left;
     gap: 20px; /* Espacio entre los iconos */
 }
 
@@ -293,3 +248,48 @@ footer {
     text-decoration: none;
 }
 
+/* Media Queries para Responsive */
+
+/* Móviles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
+
+/* Tabletas */
+@media screen and (max-width: 1024px) {
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .social-links {
+        justify-content: center;
+    }
+}
