@@ -209,6 +209,57 @@
         <a href="https://instagram.com/condores_123">
             <img src="Instagram_logo.png" alt="Instagram" width="50px">
         </a>
+        /* Media Queries para Responsive */
+
+/* Móviles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .secciones {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
+
+/* Tabletas */
+@media screen and (max-width: 1024px) {
+    .secciones {
+        grid-template-columns: 1fr 1fr ;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .footer-left, .footer-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .social-links {
+        justify-content: center;
+    }
+}
     </p>
 </footer>
 
