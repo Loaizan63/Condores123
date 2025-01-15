@@ -103,6 +103,14 @@ h2 {
     margin-bottom: 20px;
     text-align: center;
 }
+h4{
+    font-family: 'Impact', sans-serif;
+            font-size: 3rem; /* Título grande para impacto */
+            color: #D32F2F; /* Rojo fuerte */
+            text-transform: uppercase; /* Mayúsculas para resaltar */
+            letter-spacing: 5px; /* Espaciado amplio entre letras */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
+}
 /* Estilo de las tarjetas individuales */
 .plan-card {
     background-color: #000000; /* Fondo negro */
