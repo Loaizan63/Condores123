@@ -20,16 +20,12 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-.info-section1 {
-    padding: 40px;
-    text-align: center;
-    background-color: #F5F5F5; /*  */
-    color: #000; /* Negro */
-}
+
 header .logo {
     width: 120px;
 }
 
+/* Estilos de navegación */
 nav ul {
     list-style: none;
     display: flex;
@@ -49,16 +45,18 @@ nav ul li a:hover {
     color: #D32F2F; /* Rojo oscuro al hacer hover */
 }
 
+/* Sección de información */
 .info-section {
     padding: 40px;
     text-align: center;
     background-color: #FFCC00; /* Amarillo */
     color: #000; /* Negro */
 }
+
 .info-section1 {
     padding: 40px;
     text-align: center;
-    background-color: #F5F5F5; /*  */
+    background-color: #F5F5F5; /* Gris muy claro */
     color: #000; /* Negro */
 }
 
@@ -66,6 +64,8 @@ nav ul li a:hover {
     font-size: 2rem;
     margin-bottom: 20px;
 }
+
+/* Estilos para los planes */
 .plans-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* La cuadrícula se adapta a la pantalla */
@@ -79,12 +79,14 @@ nav ul li a:hover {
     margin-left: auto; /* Centra el contenedor */
     margin-right: auto; /* Centra el contenedor */
 }
-p {
 
-    font-size: 1rm;
+/* Estilo para los párrafos */
+p {
+    font-size: 1rem; /* Corregido el error tipográfico en '1rm' */
     margin-bottom: 20px;
     text-align: center;
 }
+
 /* Estilo de las tarjetas individuales */
 .plan-card {
     background-color: #000000; /* Fondo negro */
@@ -98,31 +100,21 @@ p {
     flex-direction: column; /* Organiza el contenido verticalmente */
     justify-content: center; /* Centra el contenido verticalmente */
 }
+
+/* Estilo de los encabezados h2 y h4 */
 h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
 }
-h4{
+
+h4 {
     font-family: 'Impact', sans-serif;
-            font-size: 3rem; /* Título grande para impacto */
-            color: #D32F2F; /* Rojo fuerte */
-            text-transform: uppercase; /* Mayúsculas para resaltar */
-            letter-spacing: 5px; /* Espaciado amplio entre letras */
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
-}
-/* Estilo de las tarjetas individuales */
-.plan-card {
-    background-color: #000000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 100%; /* Las tarjetas ocupan el 100% de su celda */
-    height: auto; /* Altura automática para ajustarse al contenido */
-    display: flex;
-    flex-direction: column; /* Organiza el contenido verticalmente */
-    justify-content: center; /* Centra el contenido verticalmente */
+    font-size: 3rem; /* Título grande para impacto */
+    color: #D32F2F; /* Rojo fuerte */
+    text-transform: uppercase; /* Mayúsculas para resaltar */
+    letter-spacing: 5px; /* Espaciado amplio entre letras */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
 }
 
 /* Contenedor de imágenes dentro de cada tarjeta */
@@ -171,6 +163,7 @@ h4{
     border-radius: 10px;
     border: 3px solid #D32F2F; /* Borde más sutil */
 }
+
 /* Estilos para el Footer */
 .footer {
     background-color: #000; /* Fondo negro */
@@ -178,7 +171,7 @@ h4{
     text-align: center;
     padding: 20px;
     display: flex;
-    flex-direction: column 2x3; /* Alinea los elementos en columna */
+    flex-direction: column;
     justify-content: center;
     align-items: center; /* Centra los elementos dentro del footer */
     gap: 20px; /* Añade un espacio entre los elementos */
@@ -192,13 +185,13 @@ h4{
 }
 
 .footer-logo {
-    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
+    width: 100px; /* Ajusta el tamaño de los logos */
     height: auto;
 }
 
 .footer .social-links {
     display: flex; /* Los iconos estarán en una fila */
-    justify-content: lef;
+    justify-content: center; /* Corrige el error en 'lef' y ajusta para centrado */
     gap: 20px; /* Espacio entre los iconos */
 }
 
