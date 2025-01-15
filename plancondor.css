@@ -54,7 +54,14 @@ nav ul li a:hover {
     font-size: 2rem;
     margin-bottom: 20px;
 }
-
+h4{
+    font-family: 'Impact', sans-serif;
+            font-size: 3rem; /* Título grande para impacto */
+            color: #D32F2F; /* Rojo fuerte */
+            text-transform: uppercase; /* Mayúsculas para resaltar */
+            letter-spacing: 5px; /* Espaciado amplio entre letras */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
+}
 /* Estilos para el contenedor de los planes */
 .plans-container {
     display: flex;
