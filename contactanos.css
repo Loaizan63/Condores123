@@ -1,0 +1,193 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fff; /* Fondo blanco para dar contraste */
+    color: #333;
+}
+
+header {
+    background-color: #f4f4f4; /* Fondo gris muy claro */
+    color: #000000; /* Negro */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #000000; /* Negro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #D32F2F; /* Rojo oscuro al hacer hover */
+}
+
+.info-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #FFCC00; /* Amarillo */
+    color: #000; /* Negro */
+}
+
+.info-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.info-section h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+
+/* Estilos para el enlace de WhatsApp */
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.whatsapp-icon {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.whatsapp-link:hover {
+    background-color: #128C7E;
+}
+
+/* Estilo para el mapa de Google */
+iframe {
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+/* Estilos para la sección de horarios */
+h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .info-section {
+        padding: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .whatsapp-link {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+/* Estilos para el Footer */
+.footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column 2x3; /* Alinea los elementos en columna */
+    justify-content: center;
+    align-items: center; /* Centra los elementos dentro del footer */
+    gap: 20px; /* Añade un espacio entre los elementos */
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los logos */
+}
+
+.footer-logo {
+    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
+    height: auto;
+}
+
+.footer .social-links {
+    display: flex; /* Los iconos estarán en una fila */
+    justify-content: lef;
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+.footer .social-links a {
+    color: #FFCC00; /* Amarillo para los iconos */
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    color: #D32F2F; /* Rojo al hacer hover */
+}
+
+.footer .social-links a img {
+    width: 40px; /* Ajusta el tamaño de los iconos */
+    height: auto;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #ffffff; /* Asegura que los enlaces sean blancos */
+    text-decoration: none;
+}
