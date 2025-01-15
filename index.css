@@ -286,8 +286,20 @@ nav ul li a:hover {
 .Clan a:hover p {
     color: #000000; /* Rojo en el párrafo cuando pasa el mouse */
 }
-
-
+.info-section1 {
+    padding: 40px;
+    text-align: center;
+    background-color: #F5F5F5; /*  */
+    color: #000; /* Negro */
+}
+h3{
+    font-family: 'Impact', sans-serif;
+            font-size: 3rem; /* Título grande para impacto */
+            color: #ffffff; /* Rojo fuerte */
+            text-transform: uppercase; /* Mayúsculas para resaltar */
+            letter-spacing: 5px; /* Espaciado amplio entre letras */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
+}
 .seccion h3 {
     color: #D32F2F; /* Rojo */
     margin-bottom: 10px;
