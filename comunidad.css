@@ -56,8 +56,8 @@ nav ul li a:hover {
 .info-section {
     padding: 40px;
     text-align: center;
-    background-color: #003366; /* Azul oscuro */
-    color: #fff; /* Blanco */
+    background-color: #ffffff; /* Blanco*/
+    color: #000000;
     margin-left: 40px; /* Centra el contenedor */
     margin-right: 40px; /* Centra el contenedor */
     justify-content: center;
