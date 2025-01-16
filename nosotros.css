@@ -187,7 +187,7 @@ h2 {
     text-align: center;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column 2x3; /* Alinea los elementos en columna */
     justify-content: center;
     align-items: center; /* Centra los elementos dentro del footer */
     gap: 20px; /* Añade un espacio entre los elementos */
@@ -201,13 +201,13 @@ h2 {
 }
 
 .footer-logo {
-    width: 100px; /* Ajusta el tamaño de los logos */
+    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
     height: auto;
 }
 
 .footer .social-links {
     display: flex; /* Los iconos estarán en una fila */
-    justify-content: center; /* Corrige el error en 'lef' y ajusta para centrado */
+    justify-content: lef;
     gap: 20px; /* Espacio entre los iconos */
 }
 
@@ -233,6 +233,7 @@ h2 {
     color: #ffffff; /* Asegura que los enlaces sean blancos */
     text-decoration: none;
 }
+
 /* Diseño responsive */
 @media (max-width: 768px) {
     .nav-links {
@@ -315,6 +316,12 @@ h2 {
         flex-direction: column;
         align-items: center;
     }
+
+    .footer .social-links {
+        justify-content: center;
+    }
+}
+
 
     .footer .social-links {
         justify-content: center;
