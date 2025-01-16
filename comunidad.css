@@ -56,7 +56,7 @@ nav ul li a:hover {
 .info-section {
     padding: 40px;
     text-align: center;
-    background-color: #ffffff; /* Blanco*/
+    background-color: #ffffff; /* Azul oscuro */
     color: #000000;
     margin-left: 40px; /* Centra el contenedor */
     margin-right: 40px; /* Centra el contenedor */
@@ -81,17 +81,17 @@ nav ul li a:hover {
 
 /* Estilo de las tarjetas individuales */
 .plan-card {
-    background-color: #000000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
+    background-color: #ffffff; /* Fondo Blanco */
+    color: #003366; /* Texto Negro*/
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     width: 100%; /* Las tarjetas ocupan el 100% de su celda */
     height: auto; /* Altura automática para ajustarse al contenido */
     display: flex;
+    border:2px solid#003366;
     flex-direction: column; /* Organiza el contenido verticalmente */
     justify-content: center; /* Centra el contenido verticalmente */
-    border: 2px solid #003366; /* Borde azul */
 }
 
 /* Contenedor de imágenes dentro de cada tarjeta */
@@ -116,15 +116,6 @@ h2 {
     justify-self: center;
 }
 
-h4 {
-    font-family: 'Impact', sans-serif;
-    font-size: 3rem; /* Título grande para impacto */
-    color: #ffffff; /* Blanco */
-    text-transform: uppercase; /* Mayúsculas para resaltar */
-    letter-spacing: 5px; /* Espaciado amplio entre letras */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
-}
-
 .carousel {
     background-color: #fff; /* Fondo blanco */
     padding: 40px 0;
@@ -134,7 +125,7 @@ h4 {
 .carousel h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #480095; /* Morado oscuro */
+    color: #480095; /* Rojo */
 }
 
 .carousel-container {
@@ -152,23 +143,21 @@ h4 {
 .carousel-item img {
     width: 300px;
     border-radius: 10px;
-    border: 5px solid #000000; /* Borde en las imágenes */
+    border: 5px solid #000000; /* Borde rojo en las imágenes */
 }
 
-/* Estilos de párrafos */
 .info-section p, .oracion-section p, .promesa-section p {
     font-size: 1.2rem;
     line-height: 1.6;
 }
 
-/* Estilos para el footer */
 .footer {
     background-color: #000; /* Fondo negro */
     color: #fff; /* Texto blanco */
     text-align: center;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Alinea los elementos en columna */
+    flex-direction: column 2x3; /* Alinea los elementos en columna */
     justify-content: center;
     align-items: center; /* Centra los elementos dentro del footer */
     gap: 20px; /* Añade un espacio entre los elementos */
@@ -182,13 +171,13 @@ h4 {
 }
 
 .footer-logo {
-    width: 100px; /* Ajusta el tamaño de los logos */
+    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
     height: auto;
 }
 
 .footer .social-links {
     display: flex; /* Los iconos estarán en una fila */
-    justify-content: center; /* Centra los iconos */
+    justify-content: lef;
     gap: 20px; /* Espacio entre los iconos */
 }
 
@@ -213,56 +202,4 @@ h4 {
 .footer a {
     color: #ffffff; /* Asegura que los enlaces sean blancos */
     text-decoration: none;
-}
-
-/* Media Queries para Responsive */
-
-/* Móviles */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    .secciones {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .carousel-container {
-        flex-direction: column;
-    }
-
-    .footer {
-        flex-direction: column;
-    }
-}
-
-/* Tabletas */
-@media screen and (max-width: 1024px) {
-    .secciones {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .carousel-container {
-        flex-direction: column;
-    }
-
-    .footer-left, .footer-right {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer .social-links {
-        justify-content: center;
-    }
 }
