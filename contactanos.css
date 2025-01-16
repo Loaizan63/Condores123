@@ -26,25 +26,42 @@ header .logo {
 }
 
 /* Estilos de navegación */
-nav ul {
-    list-style: none;
+.navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-nav ul li {
-    margin-left: 20px;
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+   
 }
 
-nav ul li a {
-    color: #000000; /* Negro */
-    text-decoration: none;
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
     font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
 }
 
-nav ul li a:hover {
-    color: #D32F2F; /* Rojo oscuro al hacer hover */
+.nav-links a:hover {
+    background-color: #ff0606;
 }
 
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
 /* Sección de información */
 .info-section {
     padding: 40px;
@@ -152,7 +169,6 @@ p {
         padding: 8px 12px;
     }
 }
-
 /* Estilos para el Footer */
 .footer {
     background-color: #000; /* Fondo negro */
@@ -160,7 +176,7 @@ p {
     text-align: center;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Corregido la sintaxis */
+    flex-direction: column 2x3; /* Alinea los elementos en columna */
     justify-content: center;
     align-items: center; /* Centra los elementos dentro del footer */
     gap: 20px; /* Añade un espacio entre los elementos */
@@ -174,13 +190,13 @@ p {
 }
 
 .footer-logo {
-    width: 100px; /* Ajusta el tamaño de los logos */
+    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
     height: auto;
 }
 
 .footer .social-links {
     display: flex; /* Los iconos estarán en una fila */
-    justify-content: center; /* Corregido 'lef' a 'center' */
+    justify-content: lef;
     gap: 20px; /* Espacio entre los iconos */
 }
 
@@ -205,4 +221,92 @@ p {
 .footer a {
     color: #ffffff; /* Asegura que los enlaces sean blancos */
     text-decoration: none;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+    }
+}
+/* Media Queries para Responsive */
+
+/* Móviles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        margin: 20px 0; /* Ajusta el espaciado del logo en móviles */
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .secciones {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
+
+/* Tabletas */
+@media screen and (max-width: 1024px) {
+    .secciones {
+        grid-template-columns: 1fr 1fr ;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .footer-left, .footer-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .social-links {
+        justify-content: center;
+    }
 }
