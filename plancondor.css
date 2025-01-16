@@ -25,23 +25,41 @@ header .logo {
     width: 120px;
 }
 
-nav ul {
-    list-style: none;
+.navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-nav ul li {
-    margin-left: 20px;
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+   
 }
 
-nav ul li a {
-    color: #000000; /* Negro */
-    text-decoration: none;
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
     font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
 }
 
-nav ul li a:hover {
-    color: #D32F2F; /* Rojo oscuro al hacer hover */
+.nav-links a:hover {
+    background-color: #ff0606;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .info-section {
@@ -198,13 +216,13 @@ input[type="checkbox"]:checked + .menu-button + .hidden-menu {
 .footer {
     background-color: #000; /* Fondo negro */
     color: #fff; /* Texto blanco */
-    padding: 20px;
     text-align: center;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column 2x3; /* Alinea los elementos en columna */
     justify-content: center;
-    align-items: center;
-    gap: 20px; /* Espacio entre los elementos */
+    align-items: center; /* Centra los elementos dentro del footer */
+    gap: 20px; /* Añade un espacio entre los elementos */
 }
 
 .footer-left, .footer-right {
@@ -215,13 +233,13 @@ input[type="checkbox"]:checked + .menu-button + .hidden-menu {
 }
 
 .footer-logo {
-    width: 100px; /* Ajusta el tamaño de los logos */
+    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
     height: auto;
 }
 
 .footer .social-links {
     display: flex; /* Los iconos estarán en una fila */
-    justify-content: left;
+    justify-content: lef;
     gap: 20px; /* Espacio entre los iconos */
 }
 
@@ -248,13 +266,49 @@ input[type="checkbox"]:checked + .menu-button + .hidden-menu {
     text-decoration: none;
 }
 
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+    }
+}
 /* Media Queries para Responsive */
 
 /* Móviles */
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+    .logo {
+        margin: 20px 0; /* Ajusta el espaciado del logo en móviles */
     }
 
     nav ul {
@@ -267,9 +321,12 @@ input[type="checkbox"]:checked + .menu-button + .hidden-menu {
         margin-top: 10px;
     }
 
-    .plans-container {
+    .secciones {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .carousel-container {
         flex-direction: column;
-        align-items: center;
     }
 
     .footer {
@@ -279,9 +336,12 @@ input[type="checkbox"]:checked + .menu-button + .hidden-menu {
 
 /* Tabletas */
 @media screen and (max-width: 1024px) {
-    .plans-container {
+    .secciones {
+        grid-template-columns: 1fr 1fr ;
+    }
+
+    .carousel-container {
         flex-direction: column;
-        align-items: center;
     }
 
     .footer-left, .footer-right {
