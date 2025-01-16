@@ -8,13 +8,13 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #fff; /* Fondo blanco para dar contraste */
+    background-color: #fff;
     color: #333;
 }
 
 header {
-    background-color: #f4f4f4; /* Fondo gris muy claro */
-    color: #000000; /* Negro */
+    background-color: #f4f4f4;
+    color: #000;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -25,36 +25,100 @@ header .logo {
     width: 120px;
 }
 
-nav ul {
-    list-style: none;
+h4{
+    font-family: 'Impact', sans-serif;
+            font-size: 3rem; /* Título grande para impacto */
+            color: #D32F2F; /* Rojo fuerte */
+            text-transform: uppercase; /* Mayúsculas para resaltar */
+            letter-spacing: 5px; /* Espaciado amplio entre letras */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
+}
+.navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-nav ul li {
-    margin-left: 20px;
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+   
 }
 
-nav ul li a {
-    color: #000000; /* Negro */
-    text-decoration: none;
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
     font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
 }
 
-nav ul li a:hover {
-    color: #D32F2F; /* Rojo oscuro al hacer hover */
+.nav-links a:hover {
+    background-color: #ff0606;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+    }
+}
+
+
+.info-section, .info-section1 {
+    padding: 40px;
+    text-align: center;
 }
 
 .info-section {
-    padding: 40px;
-    text-align: center;
-    background-color: #FFCC00; /* Amarillo */
-    color: #000; /* Negro */
+    background-color: #FFCC00;
+    color: #000;
 }
+
 .info-section1 {
-    padding: 40px;
-    text-align: center;
-    background-color: #F5F5F5; /*  */
-    color: #000; /* Negro */
+    background-color: #F5F5F5;
+    color: #000;
 }
 
 .info-section h2 {
@@ -71,7 +135,7 @@ nav ul li a:hover {
 
 /* Carrusel */
 .carousel {
-    background-color: #fff; /* Fondo blanco */
+    background-color: #fff;
     padding: 40px 0;
     text-align: center;
 }
@@ -79,7 +143,7 @@ nav ul li a:hover {
 .carousel h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #D32F2F; /* Rojo */
+    color: #D32F2F;
 }
 
 .carousel-container {
@@ -96,217 +160,138 @@ nav ul li a:hover {
 
 .carousel-item img {
     width: 100%;
-    max-width: 300px; /* Limita el tamaño máximo de las imágenes */
+    max-width: 300px;
     border-radius: 10px;
-    border: 3px solid #D32F2F; /* Borde más sutil */
+    border: 3px solid #D32F2F;
 }
 
 /* Sección Nuestras Secciones */
 .secciones {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Haciendo las columnas adaptables */
+    justify-items: center; /* Centra los elementos dentro de cada celda */
     gap: 20px;
     padding: 40px;
-    background-color: #F5F5F5; /* Fondo gris claro */
+    background-color: #F5F5F5;
 }
 
 .seccion {
-    background-color: #FFCC00; /* Amarillo */
+    background-color: #FFCC00;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    border: 2px solid #000; /* Borde negro */
+    border: 2px solid #000;
+    width: 100%; /* Asegura que la sección ocupe el 100% del espacio disponible en su celda de la cuadrícula */
 }
+
 .Manada, .Tropa, .Comunidad, .Clan {
-    max-width: 300px; /* Limita el tamaño de las cards */
-    height: auto; /* Mantiene la proporción del contenido */
-    margin: 0 auto; /* Centra las cards */
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    border: 2px solid #000; /* Borde negro */
+    border: 2px solid #000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .Manada img, .Tropa img, .Comunidad img, .Clan img {
-    width: 100%; /* Ajusta la imagen a la medida de la card */
-    height: 150px; /* Establece una altura fija para las imágenes */
-    object-fit: cover; /* La imagen se ajustará a la card sin perder la proporción */
-    border-radius: 10px; /* Bordes redondeados */
-    margin-bottom: 15px; /* Espaciado entre la imagen y el texto */
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .Manada:hover, .Tropa:hover, .Comunidad:hover, .Clan:hover {
-    transform: translateY(-5px); /* Movimiento hacia arriba */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 .Manada {
-    background-color: #FFCC00; /* Amarillo */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid #000; /* Borde negro */
+    background-color: #FFCC00;
 }
 
 .Manada a {
-    text-decoration: none; /* Eliminar el subrayado por defecto */
-    color: #000; /* Texto negro */
-    display: block; /* Asegura que el área del enlace sea toda la caja */
+    text-decoration: none;
+    color: #000;
+    display: block;
 }
 
 .Manada h3 {
-    color: #000000; /* Rojo */
+    color: #000;
     margin-bottom: 10px;
 }
 
 .Manada p {
-    color: #000; /* Texto negro */
-}
-
-.Manada:hover {
-    transform: translateY(-5px); /* Movimiento hacia arriba */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.Manada:hover h3 {
-    color: #ffffff; /* Blanco en el título cuando pasa el mouse */
-}
-
-.Manada a:hover p {
-    color: #000000; /* Rojo en el párrafo cuando pasa el mouse */
+    color: #000;
 }
 
 .Tropa {
-    background-color: #03961c; /* Verde */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid #000; /* Borde negro */
+    background-color: #03961c;
 }
 
-
-
 .Tropa a {
-    text-decoration: none; /* Eliminar el subrayado por defecto */
-    color: #000; /* Texto negro */
-    display: block; /* Asegura que el área del enlace sea toda la caja */
+    text-decoration: none;
+    color: #000;
+    display: block;
 }
 
 .Tropa h3 {
-    color: #000000; /* Rojo */
+    color: #000;
     margin-bottom: 10px;
 }
 
 .Tropa p {
-    color: #000; /* Texto negro */
-}
-
-.Tropa:hover {
-    transform: translateY(-5px); /* Movimiento hacia arriba */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.Tropa:hover h3 {
-    color: #ffffff; /* Blanco en el título cuando pasa el mouse */
-}
-
-.Tropa a:hover p {
-    color: #000000; /* Rojo en el párrafo cuando pasa el mouse */
+    color: #000;
 }
 
 .Comunidad {
-    background-color: #0049d1; /* Azul */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid #000; /* Borde negro */
+    background-color: #0049d1;
 }
 
 .Comunidad a {
-    text-decoration: none; /* Eliminar el subrayado por defecto */
-    color: #000; /* Texto negro */
-    display: block; /* Asegura que el área del enlace sea toda la caja */
+    text-decoration: none;
+    color: #000;
+    display: block;
 }
 
 .Comunidad h3 {
-    color: #000000; /* Rojo */
+    color: #000;
     margin-bottom: 10px;
 }
 
 .Comunidad p {
-    color: #000000; /* Texto negro */
-}
-
-.Comunidad:hover {
-    transform: translateY(-5px); /* Movimiento hacia arriba */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.Comunidad a:hover h3 {
-    color: #ffffff; /* Blanco en el título cuando pasa el mouse */
-}
-
-.Comunidad a:hover p {
-    color: #000000; /* Rojo en el párrafo cuando pasa el mouse */
+    color: #000;
 }
 
 .Clan {
-    background-color: #ff0000; /* Rojo */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid #000; /* Borde negro */
+    background-color: #ff0000;
 }
 
 .Clan a {
-    text-decoration: none; /* Eliminar el subrayado por defecto */
-    color: #000; /* Texto negro */
-    display: block; /* Asegura que el área del enlace sea toda la caja */
+    text-decoration: none;
+    color: #000;
+    display: block;
 }
 
 .Clan h3 {
-    color: #000000; /* Rojo */
+    color: #000;
     margin-bottom: 10px;
 }
 
 .Clan p {
-    color: #000; /* Texto negro */
+    color: #000;
 }
 
-.Clan:hover {
-    transform: translateY(-5px); /* Movimiento hacia arriba */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.Clan:hover h3 {
-    color: #ffffff; /* Blanco en el título cuando pasa el mouse */
-}
-
-.Clan a:hover p {
-    color: #000000; /* Rojo en el párrafo cuando pasa el mouse */
-}
-.info-section1 {
-    padding: 40px;
-    text-align: center;
-    background-color: #F5F5F5; /*  */
-    color: #000; /* Negro */
-}
-h4{
-    font-family: 'Impact', sans-serif;
-            font-size: 3rem; /* Título grande para impacto */
-            color: #D32F2F; /* Rojo fuerte */
-            text-transform: uppercase; /* Mayúsculas para resaltar */
-            letter-spacing: 5px; /* Espaciado amplio entre letras */
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
-}
 .seccion h3 {
-    color: #D32F2F; /* Rojo */
+    color: #D32F2F;
     margin-bottom: 10px;
 }
 
 .seccion p {
-    color: #000; /* Negro */
+    color: #000;
 }
 
 /* Estilos para el Footer */
@@ -346,7 +331,7 @@ h4{
 }
 
 .footer .social-links a:hover {
-    color: #D32F2F; /* Rojo al hacer hover */
+    color: #03961c; /* Rojo al hacer hover */
 }
 
 .footer .social-links a img {
@@ -362,13 +347,17 @@ h4{
     color: #ffffff; /* Asegura que los enlaces sean blancos */
     text-decoration: none;
 }
+
 /* Media Queries para Responsive */
 
 /* Móviles */
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+    .logo {
+        margin: 20px 0; /* Ajusta el espaciado del logo en móviles */
     }
 
     nav ul {
@@ -413,5 +402,3 @@ h4{
         justify-content: center;
     }
 }
-
-
