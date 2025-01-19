@@ -178,46 +178,46 @@ h2 {
 
 /* Estilos para el Footer */
 .footer {
-    background-color: #480095;
-    color: #fff;
+    background-color: #480095; /* Fondo negro */
+    color: #fff; /* Texto blanco */
     text-align: center;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Alinea los elementos en columna */
+    flex-direction: column 2x3; /* Alinea los elementos en columna */
     justify-content: center;
-    align-items: center;
-    gap: 20px;
+    align-items: center; /* Centra los elementos dentro del footer */
+    gap: 20px; /* Añade un espacio entre los elementos */
 }
 
 .footer-left, .footer-right {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /* Espacio entre los logos */
 }
 
 .footer-logo {
-    width: 100px;
+    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
     height: auto;
 }
 
 .footer .social-links {
-    display: flex;
-    justify-content: left;
-    gap: 20px;
+    display: flex; /* Los iconos estarán en una fila */
+    justify-content: lef;
+    gap: 20px; /* Espacio entre los iconos */
 }
 
 .footer .social-links a {
-    color: #FFCC00;
+    color: #FFCC00; /* Amarillo para los iconos */
     text-decoration: none;
 }
 
 .footer .social-links a:hover {
-    color: #D32F2F;
+    color: #03961c; /* Rojo al hacer hover */
 }
 
 .footer .social-links a img {
-    width: 40px;
+    width: 40px; /* Ajusta el tamaño de los iconos */
     height: auto;
 }
 
@@ -226,9 +226,10 @@ h2 {
 }
 
 .footer a {
-    color: #ffffff;
+    color: #ffffff; /* Asegura que los enlaces sean blancos */
     text-decoration: none;
 }
+
 
 /* Media Queries para Responsive */
 
@@ -312,5 +313,38 @@ h2 {
 
     .footer .social-links {
         justify-content: center;
+    }
+}
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
     }
 }
