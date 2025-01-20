@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Visitas - Grupo Scout Cóndores 123</title>
+    <link rel="stylesheet" href="saludo.css">
+    <link rel="icon" href="Logo.png" type="image/png">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html">
+            <img src="Logo.png" alt="Logo Cóndores 123" class="logo">
+        </a>
+        <h4> Altivos, Adelante, Listos</h4>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+                <li><a href="plancondor.html">Plan condor</a></li>
+                <li><a href="#">Actividades</a></li>
+                <li><a href="contactanos.html">Contacto</a></li>   
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    <!-- Sección Libro de Visitas -->
+    <section class="visitas" id="libro-de-visitas">
+        <h2>Libro de Visitas</h2>
+        <p>En este libro queremos que dejes tu huellita en el grupo y nos cuentes como estuvo tu experiencia</p>
+        
+        <!-- Mostrar Comentarios -->
+        <div id="comentarios-lista">
+            <h3>Comentarios: <span id="comentarios-count">0</span></h3>
+            <!-- Aquí se agregarán los comentarios -->
+        </div>
+
+        <!-- Formulario para agregar comentario -->
+        <form id="comentarios-form">
+            <div class="form-group">
+                <label for="name">Nombre: *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="comment">Texto: *</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+            </div>
+
+            <input type="submit" value="Enviar Comentario">
+        </form>
+
+        <div class="privacy-policy">
+            <p>Se aplica nuestra <a href="Nofound.html">Política de privacidad</a>.</p>
+        </div>
+    </section>
+
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-left">
+            <a href="https://scout.org.co/">
+                <img src="Logo-scouts.png" alt="Logo Scout" class="footer-logo">
+            </a>
+        </div>
+        <div class="footer-right">
+            <img src="Logo-Vallescout.png" alt="Logo Vallescout" class="footer-logo">
+        </div>
+        <p>&copy; 2025 Grupo Scout Cóndores 123. <br> 
+            Todos los derechos reservados.</p>
+               
+        <p><strong>Grupo Scout Cóndores 123</strong><br>
+            Santiago de Cali - Colombia <br>
+            <a href="https://maps.app.goo.gl/1zqY3RVrSoNNXJXz7">
+            Calle 13E con Cra. 58 <br>
+            Parque Primero de mayo<br>
+            </a></p>
+        <p>Contacto: <br>
+            <a href="https://wa.me/3168662946" >
+                <img src="Logo-whatsapp.png" alt="Logo-whatsapp" width="50px"> 
+            </a>
+            <a href="https://facebook.com/condores123">
+                <img src="facebooklogo.png" alt="facebook" width="55px">
+            </a>
+            <a href="https://instagram.com/condores_123">
+                <img src="Instagram_logo.png" alt="Instagram" width="50px">
+            </a>
+        </p>
+    </footer>
+    <div class="push-up" id="push-up-message">
+        <p>¡Esta función aún no está disponible!</p>
+    </div>
+   
+
+</body>
+</html>
+<script>
+function toggleMenu(menuId) {
+    const menu = document.getElementById(menuId);
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+ 
+  // script.js
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active'); // Alternar la clase 'active' en el menú
+}
+
+
+// Cargar los comentarios almacenados en localStorage
+document.addEventListener("DOMContentLoaded", function() {
+    cargarComentarios();
+});
+
+// Función para agregar un comentario
+document.getElementById("comentarios-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+
+    if (name && comment) {
+        const comentario = {
+            name: name,
+            comment: comment,
+            date: new Date().toLocaleString()
+        };
+
+        // Recuperar comentarios previos del localStorage
+        let comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+        
+        // Agregar nuevo comentario
+        comentarios.push(comentario);
+
+        // Guardar los comentarios actualizados en localStorage
+        localStorage.setItem("comentarios", JSON.stringify(comentarios));
+
+        // Limpiar el formulario
+        document.getElementById("name").value = '';
+        document.getElementById("comment").value = '';
+
+        // Recargar los comentarios
+        cargarComentarios();
+    }
+});
+
+// Función para cargar los comentarios desde localStorage
+function cargarComentarios() {
+    const comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+    const listaComentarios = document.getElementById("comentarios-lista");
+    const comentariosCount = document.getElementById("comentarios-count");
+    listaComentarios.innerHTML = `<h3>Comentarios: ${comentarios.length}</h3>`;
+
+    comentarios.forEach(function(comentario, index) {
+        const comentarioElemento = document.createElement("div");
+        comentarioElemento.classList.add("comentario");
+
+        comentarioElemento.innerHTML = `
+            <strong>${comentario.name}</strong> <span>(${comentario.date})</span>
+            <p>${comentario.comment}</p>
+        `;
+
+        listaComentarios.appendChild(comentarioElemento);
+    });
+// Muestra el mensaje push-up cuando la página se carga
+window.onload = function() {
+document.getElementById("push-up-message").style.display = "block"; // Muestra el push-up
+};
+
+
+    // Actualizar el contador de comentarios
+    comentariosCount.textContent = comentarios.length;
+}
+</script>

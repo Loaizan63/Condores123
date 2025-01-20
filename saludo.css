@@ -1,0 +1,409 @@
+/* Estilos básicos del libro de visitas */
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #FFCC00;
+   
+}
+
+header {
+    background-color: #f4f4f4;
+    color: #000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 120px;
+}
+
+h4{
+    font-family: 'Impact', sans-serif;
+            font-size: 3rem; /* Título grande para impacto */
+            color: #D32F2F; /* Rojo fuerte */
+            text-transform: uppercase; /* Mayúsculas para resaltar */
+            letter-spacing: 5px; /* Espaciado amplio entre letras */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para resaltar más */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+   
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #ff0000;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+    }
+}
+
+
+#libro-de-visitas {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd;
+}
+
+/* Título de la sección del libro de visitas */
+#libro-de-visitas h2 {
+    font-size: 2rem;
+    color: #D32F2F;
+    margin-bottom: 20px;
+}
+
+/* Lista de comentarios */
+#comentarios-lista {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#comentarios-lista h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.comentario {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.comentario strong {
+    color: #ff0000;
+}
+
+.comentario p {
+    margin-top: 5px;
+    color: #333;
+}
+
+/* Estilos del formulario */
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #D32F2F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #b71c1c;
+}
+
+/* Política de privacidad */
+.privacy-policy {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #555;
+}
+
+.privacy-policy a {
+    color: #D32F2F;
+    text-decoration: none;
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline;
+}
+/* Estilo para el push-up */
+.push-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f44336; /* Rojo */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    display: none; /* Inicialmente oculto */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.push-up p {
+    margin: 0;
+}
+
+/* Estilo general para el resto de la página */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #libro-de-visitas {
+        padding: 15px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    .comentario {
+        margin-bottom: 10px;
+    }
+}
+/* Estilo para el push-up */
+.push-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f44336; /* Rojo */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    display: none; /* Inicialmente oculto */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.push-up p {
+    margin: 0;
+}
+
+/* Estilo general para el resto de la página */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+/* Estilos para el Footer */
+.footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column 2x3; /* Alinea los elementos en columna */
+    justify-content: center;
+    align-items: center; /* Centra los elementos dentro del footer */
+    gap: 20px; /* Añade un espacio entre los elementos */
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los logos */
+}
+
+.footer-logo {
+    width: 100px; /* Ajusta el tamaño de los logos según sea necesario */
+    height: auto;
+}
+
+.footer .social-links {
+    display: flex; /* Los iconos estarán en una fila */
+    justify-content: lef;
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+.footer .social-links a {
+    color: #FFCC00; /* Amarillo para los iconos */
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    color: #03961c; /* Rojo al hacer hover */
+}
+
+.footer .social-links a img {
+    width: 40px; /* Ajusta el tamaño de los iconos */
+    height: auto;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #ffffff; /* Asegura que los enlaces sean blancos */
+    text-decoration: none;
+}
+
+/* Media Queries para Responsive */
+
+/* Móviles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        margin: 20px 0; /* Ajusta el espaciado del logo en móviles */
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .secciones {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
+
+/* Tabletas */
+@media screen and (max-width: 1024px) {
+    .secciones {
+        grid-template-columns: 1fr 1fr ;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .footer-left, .footer-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .social-links {
+        justify-content: center;
+    }
+}
