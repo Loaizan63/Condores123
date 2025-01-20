@@ -56,15 +56,13 @@ h4{
 .nav-links a {
     font-weight: bold;
     text-align: center;
-    background-color: #fff;
     color: #000;
     text-decoration: none;
 }
 
 .nav-links a:hover {
-    background-color: #ff0606;
+  color: #ff0000;
 }
-
 .hamburger {
     display: none;
     font-size: 30px;
