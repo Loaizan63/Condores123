@@ -179,7 +179,26 @@ h2 {
     border-radius: 10px;
     border: 3px solid #D32F2F; /* Borde más sutil */
 }
+/* Estilos generales para el botón */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff0000;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
 
+/* Cambio de color al pasar el ratón por encima */
+.button:hover {
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Letras negras */
+    border-color: #000; /* Borde negro */
+}
 /* Estilos para el Footer */
 .footer {
     background-color: #000; /* Fondo negro */
