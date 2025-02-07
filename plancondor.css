@@ -199,8 +199,8 @@ input[type="checkbox"] {
 .hidden-menu {
     display: none;
     padding: 20px;
-    background-color: #333; /* Fondo gris oscuro */
-    border-radius: 5px;
+    background-color: #000000; /* Fondo gris oscuro */
+    
     border: 1px solid #666; /* Borde gris */
     color: #fff;
 }
