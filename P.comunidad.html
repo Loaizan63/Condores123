@@ -1,0 +1,221 @@
++<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://loaizan63.github.io/Condores123/Logo.png" type="image/png">
+
+    <title>Generador de Correo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header img {
+            width: 120px;
+            margin: 0 10px;
+        }
+        .Encabezado{
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .Encabezado img{
+            width: 120px;
+            margin: 0 10px;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        h2{
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content p {
+            font-size: 16px;
+            color: #333333;
+        }
+        /* Estilos para el footer */
+        .footer {
+    background-color: #003366; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 20px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Asegura que el contenido se centra verticalmente */
+    width: 100%; /* Asegura que ocupe el 100% del ancho */
+    margin-top: 20px; /* Margen para separación de otros elementos */
+}
+
+        .footer-logo {
+            width: 100px;
+            margin: 10px;
+        }
+        .footer p {
+            margin: 5px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .social-links img {
+            width: 50px;
+            margin: 0 10px;
+        }
+        .input-section {
+            margin-bottom: 20px;
+        }
+        .input-section input, .input-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #002244;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://loaizan63.github.io/Condores123/Logo.png" alt="Logo Condores">
+            <img src="https://loaizan63.github.io/Condores123/LogoComunidad.png" alt="Logo Comunidad del Anillo">
+
+            <h1>Comunidad del Anillo</h1>
+        </header>
+
+        <!-- Sección para ingresar datos -->
+        <div class="input-section">
+            <label for="encabezado">Encabezado del Correo:</label>
+            <input type="text" id="encabezado" placeholder="Escribe el encabezado" />
+
+            <label for="contenido">Cuerpo del Correo:</label>
+            <textarea id="contenido" rows="6" placeholder="Escribe el contenido del correo"></textarea>
+
+            <label for="nombre">Nombre del autor:</label>
+            <input type="text" id="nombre" placeholder="Escribe el nombre del autor" />
+
+            <label for="correo">Sección de quien lo manda:</label>
+            <input type="text" id="correo" placeholder="Escribe la sección que lo manda (ejemplo: Departamento de ventas)" />
+
+            <button onclick="guardarDatos()">Guardar Información</button>
+        </div>
+
+        <!-- Botón para generar el correo -->
+        <button onclick="generarCorreo()">Generar Correo</button>
+
+        <!-- Plantilla del correo -->
+        <div class="content" id="correoGenerado" style="display:none;">
+            <div class="Encabezado">
+                <img src="https://loaizan63.github.io/Condores123/Logo.png" alt="Logo Condores">
+                <img src="https://loaizan63.github.io/Condores123/LogoComunidad.png" alt="Logo Comunidad del Anillo">
+                <h1>Comunidad del Anillo</h1>
+            </div>
+            <h2 id="correoEncabezado"></h2>
+            <p id="correoContenido"></p>
+        </div>
+
+        <!-- Footer con la estructura nueva -->
+        <footer class="footer" id="footerGenerado" style="display:none;">
+            <h2 id="nombreFooter"></h2>
+            <p id="emailFooter">"Comunidad del anillo"</p>
+            <p>&copy; 2025 Grupo Scout Cóndores 123. <br>
+                Todos los derechos reservados.
+            </p>
+
+            <p><strong>Grupo Scout Cóndores 123</strong><br>
+                Santiago de Cali - Colombia <br>
+                <a href="https://maps.app.goo.gl/1zqY3RVrSoNNXJXz7">
+                    Calle 13E con Cra. 58 <br>
+                    Parque Primero de mayo<br>
+                </a>
+            </p>
+
+            <p>Contacto: <br>
+                <a href="https://wa.me/3168662946">
+                    <img src="https://github.com/Loaizan63/Condores123/blob/main/Nwhatsapp.jpg?raw=true" alt="Logo-whatsapp" width="50px">
+                </a>
+                <a href="https://facebook.com/https://www.facebook.com/groups/224284577588256">
+                    <img src="https://raw.githubusercontent.com/Loaizan63/Condores123/abad0204c8733f11ea4a98736c37a4dffe1bc7ef/623dd7d270712bdafc63c38a.png" alt="facebook" width="55px">
+                </a>
+                <a href="https://instagram.com/condores_123">
+                    <img src="https://raw.githubusercontent.com/Loaizan63/Condores123/refs/heads/main/Ninstagram.jpg" alt="Instagram" width="50px">
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Guardar los datos en localStorage
+        function guardarDatos() {
+            const encabezado = document.getElementById('encabezado').value;
+            const contenido = document.getElementById('contenido').value;
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+
+            localStorage.setItem('encabezado', encabezado);
+            localStorage.setItem('contenido', contenido);
+            localStorage.setItem('nombre', nombre);
+            localStorage.setItem('correo', correo);
+
+            alert('Información guardada correctamente');
+        }
+
+        // Función para generar el correo
+        function generarCorreo() {
+            // Obtener los datos de localStorage
+            const encabezado = localStorage.getItem('encabezado');
+            const contenido = localStorage.getItem('contenido');
+            const nombre = localStorage.getItem('nombre');
+            const correo = localStorage.getItem('correo');
+
+            // Verificar que se haya ingresado toda la información
+            if (encabezado && contenido && nombre && correo) {
+                document.getElementById('correoGenerado').style.display = 'block';
+                document.getElementById('footerGenerado').style.display = 'block';
+
+                // Rellenar la plantilla del correo con los datos
+                document.getElementById('correoEncabezado').innerText = encabezado;
+                document.getElementById('correoContenido').innerText = contenido;
+
+                // Asignar el nombre del autor y la sección al pie de página
+                document.getElementById('nombreFooter').innerText = nombre;
+                document.getElementById('emailFooter').innerText = correo + " - Comunidad del Anillo";
+            } else {
+                alert('Por favor, asegúrate de ingresar toda la información antes de generar el correo.');
+            }
+        }
+    </script>
+</body>
+</html>
