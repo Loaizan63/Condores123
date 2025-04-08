@@ -89,7 +89,7 @@ const bonos = {
     bono: 17
   },
 "L3B8X9Q2M7D5": {
-    nombre: "Adriana Loazia ",
+    nombre: "Adriana Loaiza ",
     celular: "3173750621",
     bono: 18,
     fechaCompra: new Date('2025-04-08')
