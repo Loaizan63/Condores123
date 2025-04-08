@@ -92,7 +92,7 @@ const bonos = {
     nombre: "Adriana Loazia ",
     celular: "3173750621",
     bono: 18,
-    echaCompra: new Date('2025-04-08')
+    fechaCompra: new Date('2025-04-08')
   },
   "M7C9T5X3P2Y6": {
     nombre: "No-Register",
