@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarjetas con Códigos</title>
+  <style>
+    body { 
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #572364, #2e0d3a);
+        color: #ffffff;
+    }
+
+    .header {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin: 20px auto 0;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .header p {
+        font-size: 16px;
+        color: #ffffff;
+        margin-top: 10px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #bonos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        width: 250px;
+        text-align: center;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease-in-out;
+        position: relative;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        backdrop-filter: none;
+    }
+
+    .card h2 {
+        color: #ffffff;
+        margin-bottom: 15px;
+        font-size: 22px;
+        font-weight: 600;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .code {
+        font-weight: bold;
+        color: #ffffff;
+        margin: 8px 0;
+        font-size: 16px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    }
+
+    .rojo {
+        background-color: rgba(255, 0, 0, 0.3);
+        border: 1px solid rgba(255, 100, 100, 0.5);
+    }
+
+    .vendido {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 0, 0, 0.8);
+        border-radius: 15px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+        z-index: 1;
+    }
+
+    .rojo:hover .vendido {
+        display: flex;
+    }
+
+    footer {
+      background-color: #2e0d3a;
+      color: #ffffff;
+      text-align: center;
+      padding: 15px 20px;
+      width: 100%;
+      font-size: 14px;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+    .sorteos {
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+}
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.form-wrapper iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 1900px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.05);
+}
+.sorteos h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.sorteo-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sorteo-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 180px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s;
+}
+
+.sorteo-card:hover {
+  transform: scale(1.05);
+}
+
+.sorteo-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffe066;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.sorteo-card p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.countdown {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Bienvenido a esta página</h1>
+    <p>A continuación verás los bonos existentes</p>
+  </header>
+<div class="container">
+    <h2> Podras ganar hasta 5 millones de pesos</h2>
+    <p> son 5 sorteos cada mes diferidos asi:</p>
+</div>
+<div class="sorteo-container">
+    <div class="sorteo-card">
+        <h3>Sorteo 1</h3>
+        <p> $ 500.000 pesos</p>
+    </div>
+    <div class="sorteo-card">
+        <h3>Sorteo 2</h3>
+        <p> $ 500.000 pesos</p>
+    </div>
+    <div class="sorteo-card">
+        <h3>Sorteo 3</h3>
+        <p> $ 1'000.000 pesos</p>
+    </div>
+    <div class="sorteo-card">
+        <h3>Sorteo 4</h3>
+        <p> $ 1'000.000 pesos</p>
+    </div>
+    <div class="sorteo-card">
+        <h3>Sorteo 5</h3>
+        <p> $ 2'000.000 pesos</p>
+    </div>
+</div>
+  <div class="container">
+    <div id="bonos"></div>
+  </div>
+  <div class="form-wrapper">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSekGH9Dkcfa-XGX2TGcbg32UqlseHw6Pu-5Lw-qpxWii6fmcA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+  </div>
+  
+  <div class="sorteos">
+    <h2>Fechas de Sorteo</h2>
+    <div class="sorteo-container">
+      <div class="sorteo-card">
+        <h3>Sorteo 1</h3>
+        <p>28 de mayo</p>
+        <div class="countdown" data-date="2025-05-28T00:00:00"></div>
+      </div>
+      <div class="sorteo-card">
+        <h3>Sorteo 2</h3>
+        <p>25 de junio</p>
+        <div class="countdown" data-date="2025-06-25T00:00:00"></div>
+      </div>
+      <div class="sorteo-card">
+        <h3>Sorteo 3</h3>
+        <p>30 de julio</p>
+        <div class="countdown" data-date="2025-07-30T00:00:00"></div>
+      </div>
+      <div class="sorteo-card">
+        <h3>Sorteo 4</h3>
+        <p>27 de agosto</p>
+        <div class="countdown" data-date="2025-08-27T00:00:00"></div>
+      </div>
+      <div class="sorteo-card">
+        <h3>Sorteo 5</h3>
+        <p>24 de septiembre</p>
+        <div class="countdown" data-date="2025-09-24T00:00:00"></div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <p>El responsable de esta actividad es el consejo de padres del grupo scout 123</p>
+    <p id="estadoBonos"></p>
+    <p>&copy; Julian Lozano</p>
+  </footer>
+
+  <script>
+    const baseA = 550;
+    const baseB = 799;
+    const baseC = 32;
+    const baseD = 281;
+
+    const container = document.getElementById('bonos');
+    let vendidos = 0;
+
+    for (let i = 1; i <= 20; i++) {
+      const a = baseA - i;
+      const b = baseB - i;
+      const c = baseC + i;
+      const d = baseD + i;
+
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.id = `tarjeta-${i}`;
+
+      if (i === 2 || i === 8 || i === 20) {
+        card.classList.add('rojo');
+        vendidos++;
+      }
+
+      card.innerHTML = `
+        <h2>Bono No.${i}</h2>
+        <div class="code">Código A: ${a}</div>
+        <div class="code">Código B: ${b}</div>
+        <div class="code">Código C: ${c.toString().padStart(3, '0')}</div>
+        <div class="code">Código D: ${d}</div>
+        <div class="vendido">VENDIDO</div>
+      `;
+
+      container.appendChild(card);
+    }
+
+    const disponibles = 20 - vendidos;
+    document.getElementById("estadoBonos").innerText = `Bonos disponibles: ${disponibles} | Bonos vendidos: ${vendidos}`;
+    function updateCountdown() {
+    const countdowns = document.querySelectorAll('.countdown');
+    const now = new Date().getTime();
+
+    countdowns.forEach(el => {
+      const targetDate = new Date(el.getAttribute('data-date')).getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        el.innerText = "¡Ya ocurrió!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      el.innerText = `${days}d ${hours}h ${minutes}m restantes`;
+    });
+  }
+
+  setInterval(updateCountdown, 60000); // Actualiza cada minuto
+  updateCountdown();
+
+  
+  </script>
+</body>
+</html>
