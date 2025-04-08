@@ -88,10 +88,11 @@ const bonos = {
     celular: "No-register",
     bono: 17
   },
-  "L3B8X9Q2M7D5": {
-    nombre: "No-Register",
-    celular: "No-register",
-    bono: 18
+"L3B8X9Q2M7D5": {
+    nombre: "Adriana Loazia ",
+    celular: "3173750621",
+    bono: 18,
+    echaCompra: new Date('2025-04-08')
   },
   "M7C9T5X3P2Y6": {
     nombre: "No-Register",
