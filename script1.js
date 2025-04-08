@@ -1,0 +1,142 @@
+// Datos de los 20 bonos
+const bonos = {
+    "X7K92M4T8C1D": {
+      nombre: "Julian Lozano",
+      celular: "301***8074",
+      bono: 1
+    },
+    "A9X3C7P5T2M4": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 2
+    },
+    "B7K6Y2L9Q8D1": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 3
+    },
+    "Z5N3M2X8T4K6": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 4
+    },
+    "F4Y8C9P3L7T2": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 5
+    },
+    "M2X7B5L9Q6D3": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 6
+    },
+    "T9C3P5X7Y2K6": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 7
+    },
+    "L8Q2B7X9M3D5": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 8
+    },
+    "X3T9C5P7M2Y6": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 9
+    },
+    "Q7B6X2M9L3D8": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 10
+    },
+    "P5C7T9X2M3Y6": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 11
+    },
+    "Y2B8X9M3L7D5": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 12
+    },
+    "X7C9T5P3M2Y6": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 13
+    },
+    "Q9B6X2M8L3D7": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 14
+    },
+    "P3C7T9X5M2Y6": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 15
+    },
+    "B5X7Q9M2L3D8": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 16
+    },
+    "X9C3T7P5M2Y6": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 17
+    },
+    "L3B8X9Q2M7D5": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 18
+    },
+    "M7C9T5X3P2Y6": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 19
+    },
+  "D2B6X9M7L3Q8": {
+      nombre: "No-Register",
+      celular: "No-register",
+      bono: 20
+    },
+ 
+};
+
+  
+  // Función que maneja la verificación del código
+  document.getElementById("verification-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+  
+    // Obtener el código ingresado por el usuario
+    const code = document.getElementById("code").value.trim();
+  
+    // Mostrar el resultado
+    const resultDiv = document.getElementById("result");
+  
+    if (bonos[code]) {
+      // Si el código es válido
+      resultDiv.innerHTML = `
+        <div class="checkmark">✔️</div>
+        <div class="success">
+          <h2>Bono verificado</h2>
+          <p><strong>Nombre:</strong> ${bonos[code].nombre}</p>
+          <p><strong>Numero de celular:</strong> ${bonos[code].celular}</p>
+          <p><strong>Bono:</strong> ${bonos[code].bono}</p>
+        </div>
+      `;
+    } else {
+      // Si el código no es válido
+      resultDiv.innerHTML = `
+        <div class="error-mark">❌</div>
+        <div class="error">
+          <h2>¡Código no válido!</h2>
+          <p>El código ingresado no está registrado. Intenta de nuevo.</p>
+        </div>
+      `;
+    }
+  
+    // Mostrar el resultado
+    resultDiv.style.display = "block";
+  });
+  
