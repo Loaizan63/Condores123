@@ -8,69 +8,72 @@
 <body>
   <header class="header">
     <h1>Bienvenidos</h1>
-<h1> Valor del bono 100.000 pesos o 20.000 pesos por mes<h1>
    <p>Con tu colaboración podrás hacer realidad mi sueño de participar en eventos scouts de relevancia internacional, agradezco mucho tu apoyo.<br>
 A continuación verás los bonos existentes <br>
-<a href="verify.html">verificar bono</a></p>
+<p>Con cada sorteo tienes 4 números de 3 cifras para participar <br>
+
+  El costo total de la boleta es de <strong> $100.000</strong> <br>
+  
+  La puedes pagar de contado o en <strong> 5 </strong> cuotas de <strong>$20.000</strong> c/u de acuerdo a los sorteos que se van jugando</p>
+</p> <a href="verify.html" class="button">verificar bono</a>
   </header>
-<div class="sorteo-container1">
+
+
+  <div class="sorteo-container">
     <div class="sorteo-card">
-        <h3>Sorteo 1</h3>
-        <p> $ 500.000 pesos</p>
+      <h3>Sorteo 1</h3>
+      <p> $ 500.000 pesos</p>
+      <div class="sc-hover">
+        <h3>Fecha 1</h3>
+        <p>28 de mayo</p>
+        <div class="countdown" data-date="2025-05-28T00:00:00"></div>
+      </div>
+    </div>
+    
+    <div class="sorteo-card">
+      <h3>Sorteo 2</h3>
+      <p> $ 500.000 pesos</p>
+      <div class="sc-hover">
+        <h3>Fecha 2</h3>
+        <p>25 de junio</p>
+        <div class="countdown" data-date="2025-06-25T00:00:00"></div>
+      </div>
+    </div>
+
+    <div class="sorteo-card">
+      <h3>Sorteo 3</h3>
+      <p> $ 1'000.000 pesos</p>
+      <div class="sc-hover">
+        <h3>Fecha 3</h3>
+        <p>30 de julio</p>
+        <div class="countdown" data-date="2025-07-30T00:00:00"></div>
+      </div>
     </div>
     <div class="sorteo-card">
-        <h3>Sorteo 2</h3>
-        <p> $ 500.000 pesos</p>
+    <h3>Sorteo 4</h3>
+    <p> $ 1'000.000 pesos</p>
+    <div class="sc-hover">
+      <h3>Fecha 4</h3>
+      <p>30 de Junio</p>
+      <div class="countdown" data-date="2025-08-27T00:00:00"></div>
+    </div>
     </div>
     <div class="sorteo-card">
-        <h3>Sorteo 3</h3>
-        <p> $ 1'000.000 pesos</p>
-    </div>
-    <div class="sorteo-card">
-        <h3>Sorteo 4</h3>
-        <p> $ 1'000.000 pesos</p>
-    </div>
-    <div class="sorteo-card">
-        <h3>Sorteo 5</h3>
-        <p> $ 2'000.000 pesos</p>
-    </div>
-</div>
+      <h3>Sorteo 5</h3>
+      <p> $ 2'000.000 pesos</p>
+      <div class="sc-hover">
+        <h3>Fecha 5</h3>
+        <p>24 de Septiembre</p>
+        <div class="countdown" data-date="2025-09-24T00:00:00"></div>
+      </div>
+  </div>
+  </div>
+  
   <div class="container">
     <div id="bonos"></div>
   </div>
   <div class="form-wrapper">
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSekGH9Dkcfa-XGX2TGcbg32UqlseHw6Pu-5Lw-qpxWii6fmcA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-  </div>
-  
-  <div class="sorteos">
-    <h2>Fechas de Sorteo</h2>
-    <div class="sorteo-container">
-      <div class="sorteo-card">
-        <h3>Sorteo 1</h3>
-        <p>28 de mayo</p>
-        <div class="countdown" data-date="2025-05-28T00:00:00"></div>
-      </div>
-      <div class="sorteo-card">
-        <h3>Sorteo 2</h3>
-        <p>25 de junio</p>
-        <div class="countdown" data-date="2025-06-25T00:00:00"></div>
-      </div>
-      <div class="sorteo-card">
-        <h3>Sorteo 3</h3>
-        <p>30 de julio</p>
-        <div class="countdown" data-date="2025-07-30T00:00:00"></div>
-      </div>
-      <div class="sorteo-card">
-        <h3>Sorteo 4</h3>
-        <p>27 de agosto</p>
-        <div class="countdown" data-date="2025-08-27T00:00:00"></div>
-      </div>
-      <div class="sorteo-card">
-        <h3>Sorteo 5</h3>
-        <p>24 de septiembre</p>
-        <div class="countdown" data-date="2025-09-24T00:00:00"></div>
-      </div>
-    </div>
   </div>
   
   <footer>
@@ -98,7 +101,7 @@ A continuación verás los bonos existentes <br>
       card.className = 'card';
       card.id = `tarjeta-${i}`;
 
-      if (i === 2 || i === 8 || i === 20) {
+      if (i === 2 || i === 8 || i === 20 ) {
         card.classList.add('rojo');
         vendidos++;
       }
