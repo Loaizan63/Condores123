@@ -1,9 +1,21 @@
+const baseA = 550;
+    const baseB = 799;
+    const baseC = 32;
+    const baseD = 281;
+    for (let i = 1; i <= 20; i++) {
+      const a = baseA - i;
+      const b = baseB - i;
+      const c = baseC + i;
+      const d = baseD + i;
+
+      }
 // Datos de los 20 bonos
-const bonos = {
+const bonos1 = {
   "X7K92M4T8C1D": {
-    nombre: "Julian Lozano",
-    celular: "301808074",
-    bono: 1
+    nombre: "",
+    celular: "",
+    bono: 1,
+    fechaCompra: new Date('') 
   },
   "A9X3C7P5T2M4": {
     nombre: "Alvaro Loaiza",
@@ -14,27 +26,32 @@ const bonos = {
   "B7K6Y2L9Q8D1": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 3
+    bono: 3,
+    fechaCompra: new Date('') 
   },
   "Z5N3M2X8T4K6": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 4
+    bono: 4,
+    fechaCompra: new Date('') 
   },
   "F4Y8C9P3L7T2": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 5
+    bono: 5,
+    fechaCompra: new Date('') 
   },
   "M2X7B5L9Q6D3": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 6
+    bono: 6,
+    fechaCompra: new Date('') 
   },
   "T9C3P5X7Y2K6": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 7
+    bono: 7,
+    fechaCompra: new Date('') 
   },
   "L8Q2B7X9M3D5": {
     nombre: "Ana Paola Loaiza",
@@ -45,54 +62,62 @@ const bonos = {
   "X3T9C5P7M2Y6": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 9
+    bono: 9,
+    fechaCompra: new Date('') 
   },
   "Q7B6X2M9L3D8": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 10
+    bono: 10,
+    fechaCompra: new Date('') 
   },
   "P5C7T9X2M3Y6": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 11
+    bono: 11,
+    fechaCompra: new Date('') 
   },
   "Y2B8X9M3L7D5": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 12
+    bono: 12,
+    fechaCompra: new Date('') 
   },
   "X7C9T5P3M2Y6": {
     nombre: "No-Register",
     celular: "No-register",
     bono: 13,
-    fechaCompra: new Date('2025-04-08') // Coma añadida
+    fechaCompra: new Date('') 
   },
   "Q9B6X2M8L3D7": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 14
+    bono: 14,
+    fechaCompra: new Date('') 
   },
   "P3C7T9X5M2Y6": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 15
+    bono: 15,
+    fechaCompra: new Date('') 
   },
   "B5X7Q9M2L3D8": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 16
+    bono: 16,
+    fechaCompra: new Date('') 
   },
   "X9C3T7P5M2Y6": {
     nombre: "No-Register",
     celular: "No-register",
-    bono: 17
+    bono: 17,
+  fechaCompra: new Date('') 
   },
-"L3B8X9Q2M7D5": {
+  "L3B8X9Q2M7D5": {
     nombre: "Adriana Loaiza ",
     celular: "3173750621",
     bono: 18,
-    fechaCompra: new Date('2025-04-08')
+    echaCompra: new Date('2025-04-08')
   },
   "M7C9T5X3P2Y6": {
     nombre: "No-Register",
@@ -108,17 +133,15 @@ const bonos = {
   }
 };
 
+
 // Función para censurar el número de celular
 function censurarCelular(celular) {
-  // Verificar si el celular es un número válido
   if (celular !== "No-register") {
-    // Extraer los primeros 3 y los últimos 4 dígitos
     const primeros3 = celular.slice(0, 3);
     const ultimos4 = celular.slice(-4);
-    // Reemplazar los 4 dígitos del medio por '***'
     return `${primeros3}***${ultimos4}`;
   } else {
-    return celular; // Si no es válido, retornar 'No-register'
+    return celular;
   }
 }
 
@@ -126,39 +149,43 @@ function censurarCelular(celular) {
 document.getElementById("verification-form").addEventListener("submit", function(event) {
   event.preventDefault();
 
-  // Obtener el código ingresado por el usuario
   const code = document.getElementById("code").value.trim();
-  
-  // Verifica si el bono existe
   const resultDiv = document.getElementById("result");
 
-  if (bonos[code]) {
-    // Si el código es válido
+  if (bonos1[code]) {
+    const i = bonos1[code].bono; // El índice i es el número del bono
+    const a = baseA - i;
+    const b = baseB - i;
+    const c = baseC + i;
+    const d = baseD + i;
 
-    // Formatear la fecha de compra
-    const fechaCompra = new Date(bonos[code].fechaCompra);
+    const fechaCompra = new Date(bonos1[code].fechaCompra);
     const fechaCompraFormateada = `${fechaCompra.getDate()}/${fechaCompra.getMonth() + 1}/${fechaCompra.getFullYear()}`;
 
-    // Obtener la fecha actual
     const fechaActual = new Date();
     const fechaFormateada = `${fechaActual.getDate()}/${fechaActual.getMonth() + 1}/${fechaActual.getFullYear()}`;
 
-    // Censurar el número de celular
-    const celularCensurado = censurarCelular(bonos[code].celular);
+    const celularCensurado = censurarCelular(bonos1[code].celular);
 
     resultDiv.innerHTML = `
       <div class="checkmark">✔️</div>
       <div class="success">
         <h2>Bono verificado</h2>
-        <p>Felicidades, usted ha realizado la compra del <strong>Bono #</strong> ${bonos[code].bono}</p>
-        <p><strong>Nombre:</strong> ${bonos[code].nombre}</p>
-        <p><strong>Numero de celular:</strong> ${celularCensurado}</p>
+        <p>Felicidades, usted ha realizado la compra del <strong>Bono #</strong> ${bonos1[code].bono}</p>
+        <p><strong>Nombre:</strong> ${bonos1[code].nombre}</p>
+        <p><strong>Número de celular:</strong> ${celularCensurado}</p>
+        <p><strong>Seriales del bono:</strong></p>
+        <ul>
+          <li><strong>Número A:</strong> ${a}</li>
+          <li><strong>Número B:</strong> ${b}</li>
+          <li><strong>Número C:</strong> ${c.toString().padStart(3, '0')}</li>
+          <li><strong>Número D:</strong> ${d}</li>
+        </ul>
         <p><strong>Fecha de compra:</strong> ${fechaCompraFormateada}</p>
         <p><strong>Fecha de validación:</strong> ${fechaFormateada}</p>
       </div>
     `;
   } else {
-    // Si el código no es válido
     resultDiv.innerHTML = `
       <div class="error-mark">❌</div>
       <div class="error">
@@ -168,6 +195,6 @@ document.getElementById("verification-form").addEventListener("submit", function
     `;
   }
 
-  // Mostrar el resultado
   resultDiv.style.display = "block";
 });
+
