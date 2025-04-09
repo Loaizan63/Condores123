@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comprobante de compra de bono</title>
   <link rel="stylesheet" href="stilo.css">
+  <link rel="icon" href="https://th.bing.com/th/id/OIP.iXxlyRXq_F8P610HabjCzQHaHa?rs=1&pid=ImgDetMain" type="image/png">
 </head>
 <body>
-  <div class="container">
+  <div class="header">
     <h1>Verificación de Bono</h1>
     <form id="verification-form">
       <label for="code">Ingrese el código de bono:</label>
-      <input type="text" id="code" name="code" required>
+      <input type="text" id="code" placeholder="Codigo de 10 letras" name="code" required>
       <button type="submit">Verificar</button>
     </form>
-
-    <div id="result" class="result">
-      <!-- El resultado de la verificación se mostrará aquí -->
-    </div>
   </div>
+  <div class="container-result"> 
+    <div id="result" class="result">
+    <!-- El resultado de la verificación se mostrará aquí -->
+  </div>
+</div>
+</div>
+   
 
   <script src="script1.js"></script>
 </body>
