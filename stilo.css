@@ -2,8 +2,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: rgb(255, 255, 255);
     color: #000000;
+    
 }
 
 .header {
@@ -29,9 +29,23 @@ body {
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    text-align: center;
     width: 100%;
+}
+.container-result{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 20px auto 0;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 10px;
 }
 
 #bonos {
