@@ -30,10 +30,10 @@ const bonos1 = {
     fechaCompra: new Date('') 
   },
   "Z5N3M2X8T4K6": {
-    nombre: "No-Register",
-    celular: "No-register",
+    nombre: "Lady Laura Delgado Guerrero",
+    celular: "3011007228",
     bono: 4,
-    fechaCompra: new Date('') 
+    fechaCompra: new Date('2025-04-11') 
   },
   "F4Y8C9P3L7T2": {
     nombre: "No-Register",
