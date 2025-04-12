@@ -171,8 +171,7 @@ document.getElementById("verification-form").addEventListener("submit", function
       <div class="checkmark">✔️</div>
       <div class="success">
         <h2>Bono verificado</h2>
-        <p>Felicidades <strong>Nombre:</strong> ${bonos1[code].nombre}, usted ha realizado la compra del <strong>Bono #</strong> ${bonos1[code].bono}</p>
-        <
+        <p>Felicidades ${bonos1[code].nombre}, usted ha realizado la compra del Bono # ${bonos1[code].bono}</p>
         <p><strong>Número de celular:</strong> ${celularCensurado}</p>
         <p><strong>Seriales del bono:</strong></p>
         <ul>
